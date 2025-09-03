@@ -1,4 +1,4 @@
-# ![](./photo cv.png)  
+# ![](./photocv.png)  
 # Anouar Rouibi
 
 ### Étudiant en BUT Informatique – Université Sorbonne Paris Nord  
