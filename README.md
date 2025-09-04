@@ -14,8 +14,12 @@ Ce portfolio présente mes **projets, compétences et stages** en adoptant une d
 ---
 
 ## 📈 Compétences clés
-*(reprendre ta liste actuelle mais garder le lien direct avec les 6 compétences du BUT : réaliser, optimiser, administrer, gérer des données, conduire un projet, collaborer)*
-
+- **Réaliser** : développement full-stack (React, Node.js,PHP, C# .NET, JAVA)  
+- **Optimiser** : architecture maintenable, refactoring, performance, documentation  
+- **Administrer** : systèmes Linux/Windows, Docker, sécurité, bash  
+- **Gérer des données** : SQL (PostgreSQL, MySQL), modélisation, reporting, data-viz  
+- **Conduire un projet** : méthodes Agile (Scrum/Kanban), Notion, Trello, gestion d’équipe  
+- **Collaborer** : GitHub, Slack, communication en équipe, adaptation aux contraintes  
 ---
 
 ## 🚀 Parcours académique
@@ -27,21 +31,31 @@ Ce portfolio présente mes **projets, compétences et stages** en adoptant une d
 
 ## 🛠 Projets & SAÉ
 
-### SAÉ 01 : Application de gestion
-- **Durée** : X semaines – travail en équipe de X personnes  
-- **Objectif** : développer une solution de gestion (détailler brièvement)  
-- **Technos/outils** : Java, SQL, GitHub, Docker  
-- **Rôle** : développement back-end & base de données  
-- **Livrables** : [Lien GitHub](https://github.com/...)  
-- **Bilan critique** : points forts, vigilance, acquis
+### SAÉ 01 : Enquête sur la poursuite d’études et l’insertion professionnelle – IUT de Villetaneuse (janv. 2025 – avr. 2025)  
+- **Contexte** : Projet mené à la demande du **HCÉRES** pour analyser le devenir des diplômés de l’IUT.  
+- **Objectifs** : Étudier les trajectoires (poursuites d’études, insertion professionnelle) et fournir des recommandations aux responsables de formation.  
+- **Actions réalisées** :  
+  - Interviews qualitatives avec chefs de départements  
+  - Création d’un questionnaire structuré pour anciens diplômés  
+  - Analyse et synthèse des données collectées  
+- **Compétences mobilisées** : gestion de projet, collecte & analyse de données, communication académique  
+- **Bilan critique** :  
+  - Points forts : rigueur méthodologique, restitution claire  
+  - Vigilance : délais de collecte parfois contraints  
+  - Acquis : meilleure compréhension des démarches d’évaluation académique
 
-### SAÉ 02 : Site de gestion parc zoologique
-- **Durée** : 3 mois – projet en équipe  
-- **Objectif** : concevoir une application complète de gestion du zoo  
-- **Technos/outils** : Python/Django, PostgreSQL, HTML/CSS  
-- **Rôle** : front + back complet  
-- **Livrables** : [Lien GitHub](https://github.com/...)  
-- **Bilan critique** : UX/UI, répartition des rôles, travail en autonomie
+---
+
+### SAÉ 02 : Application de gestion d’équipement de sport d’hiver (janv. 2024 – avr. 2024)  
+- **Contexte** : Projet d’équipe pour un **village de vacances**  
+- **Objectifs** : Développer une application de bureau pour gérer stocks, locations et retours d’équipements (skis, snowboards, casques, vêtements).  
+- **Technologies utilisées** : C#, .NET Framework, MySQL, Windows Form  
+- **Rôle** : développement intégral (conception base de données, logique métier, interface utilisateur)  
+- **Bilan critique** :  
+  - Points forts : gestion efficace des stocks, interface intuitive  
+  - Vigilance : manque de tests automatisés et documentation à améliorer  
+  - Acquis : maîtrise de C# / .NET, conception d’une application complète orientée gestion  
+  - **Livrables** : [Lien GitHub](https://github.com/Anwar101293/Projet_magasin_sport)
 
 ---
 
@@ -66,16 +80,21 @@ Ce portfolio présente mes **projets, compétences et stages** en adoptant une d
   - Bonnes surprises : liberté technique, montée en compétences rapides  
   - Acquis pour la suite : expérience réelle de déploiement en production
 
-### Technicien support IT – JO Paris 2024 (Atos)
-- Gestion d’un site IT pendant les Jeux Olympiques (support, sécurité, incidents).  
-- Compétences : rigueur, réactivité, travail en pression.  
-
-### Développeur web junior – Vinci Aart
-- Participation à une refonte de site vitrine + e-commerce sous Shopify.  
-- Compétences : travail en équipe, SEO, UX/UI.  
-
-### Agent logistique – Chronopost
-- Traitement SAV, gestion de stocks, Excel avancé.  
+### Stage – Vinci Aart (La Courneuve) – 2023-2024  
+- **Contexte** : Agence de design et rénovation  
+- **Missions principales** :  
+  - Collaboration avec une équipe de 3 développeurs pour la **refonte du site vitrine**  
+  - Développement d’une **plateforme e-commerce** (Shopify) pour les produits de parfumerie d’intérieur  
+  - Optimisation SEO et intégration responsive/mobile first  
+- **Compétences développées** :  
+  - Réaliser → développement front-end & CMS  
+  - Optimiser → ergonomie, accessibilité, SEO  
+  - Administrer → intégration & configuration CMS  
+  - Collaborer → travail en équipe, méthode agile  
+- **Autoévaluation** :  
+  - Points forts : esprit d’équipe, réactivité, maîtrise des outils CMS  
+  - Vigilance : adaptation aux contraintes de l’agence et délais serrés  
+  - Acquis : expérience e-commerce, UX/UI, gestion de bugs et optimisation  
 
 ---
 
