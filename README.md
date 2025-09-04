@@ -1,105 +1,110 @@
-# ![](./photocv.png)  
+# ![](./photocv.png){:style="width:150px; border-radius:50%"}  
 # Anouar Rouibi
 
-### Étudiant en BUT Informatique – Université Sorbonne Paris Nord  
-[LinkedIn](https://www.linkedin.com/in/anouar-rouibi) • [Email](mailto:anouar.rbpro@gmail.com)
+### Étudiant en BUT TECHNOLOIGIE DE L'INFORMATION – Université Sorbonne Paris Nord  
+[LinkedIn](https://www.linkedin.com/in/anouar-rouibi) • [Email](mailto:anouar.rbpro@gmail.com) • [GitHub](https://github.com/Anwar101293)
 
 ---
 
-## 🎯 À propos
-
-Bienvenue sur mon portfolio !  
-Actuellement en 3ème année de BUT informatique , je suis passionné par le développement applicatif, l’administration système et la gestion de projet. Ce portfolio valorise mon parcours universitaire et professionnel, en particulier mes compétences acquises lors de stages, projets académiques et personnels, conformément aux attendus du BUT 2 Passerelle.
+## 📝 A propos
+Étant en **BUT 2 passerelle** après un **BTS SIO**, j’ai choisi de continuer mon parcours vers le développement web, l’administration système et la gestion de projet.  
+Mon objectif a long terme est de devenir **Un consultant IT**, en combinant mes compétences techniques et mes expériences en entreprise.  
+Ce portfolio présente mes **projets, compétences et stages** en adoptant une démarche réflexive, conformément aux attendus de ce BUT.
 
 ---
 
 ## 📈 Compétences clés
-
-- **Développement d’application** : réalisation d’applications web/mobile, maîtrise de frameworks modernes (ex : React, Node.js, Django...)
-- **Optimisation d’applications** : amélioration de la performance, refactoring, documentation, tests
-- **Administration systèmes** : déploiement, scripts, sécurité, virtualisation, gestion réseaux (Linux/Windows, Docker…)
-- **Gestion de données** : modélisation, SGBD, requêtes SQL, reporting, data visualisation
-- **Conduite de projet** : gestion Agile, outils collaboratifs, spécifications et suivi, SCRUM/Kanban
-- **Collaboration** : communication, gestion équipe, adaptation en contexte professionnel
+*(reprendre ta liste actuelle mais garder le lien direct avec les 6 compétences du BUT : réaliser, optimiser, administrer, gérer des données, conduire un projet, collaborer)*
 
 ---
 
 ## 🚀 Parcours académique
-- **2024-2025**: BUT 2 Passerelle Informatique - Université Sorbonne Paris Nord
-- **2022-2024**: BTS SIO 
-- **2021**: Baccalauréat scientifique
+- **2024-2025** : BUT 2 Passerelle TI – IUT DE VILLETANEUSE 
+- **2022-2024** : BTS Service informatiques des organisations (option SLAM) – Lycée Parc de Vilgénis, Massy  
+- **2018-2021** : Bac général – Lycée Blaise Cendrars, Sevran  
 
 ---
 
 ## 🛠 Projets & SAÉ
 
-### SAÉ 01 : Application de gestion (voir LinkedIn pour détails)
-- **Contexte** : réalisé en équipe (X personnes) pendant X semaines, objectif : développer une solution…
-- **Technos/outils** : (ex : Java, SQL, GitHub, Docker)
-- **Rôle** : développement back-end, gestion de la base de données
-- **Livrables** : [Lien du livrable github](https://github.com/...)
-- **Compétences mobilisées** : réalisation, administration, optimisation
-- **Bilan critique** :
-  - Points forts : structure modulaire, documentation claire…
-  - Axes d’amélioration : gestion des tests, communication équipe
-  
-### SAÉ 02 : Site de gestion parc zoologique & employés
-- **Contexte** : projet en équipe, , 3 mois
-- **Technos/outils** : Python/Django, PostgreSQL, HTML/CSS
-- **Rôle** : développement intégral (front & back)
-- **Livrables** : [Voir le code sur Github](https://github.com/...)
-- **Compétences mobilisées** : développement, gestion de données, conception d'un projet 
-- **Bilan critique** :
-  - Points forts : gestion des accès, UX UI
-  - Problèmes : Répartition des rôle
+### SAÉ 01 : Application de gestion
+- **Durée** : X semaines – travail en équipe de X personnes  
+- **Objectif** : développer une solution de gestion (détailler brièvement)  
+- **Technos/outils** : Java, SQL, GitHub, Docker  
+- **Rôle** : développement back-end & base de données  
+- **Livrables** : [Lien GitHub](https://github.com/...)  
+- **Bilan critique** : points forts, vigilance, acquis
 
-*(Ajoute des screenshots dans `assets/`, mets-les avec `![](assets/nom_image.jpg)` par mission)*
+### SAÉ 02 : Site de gestion parc zoologique
+- **Durée** : 3 mois – projet en équipe  
+- **Objectif** : concevoir une application complète de gestion du zoo  
+- **Technos/outils** : Python/Django, PostgreSQL, HTML/CSS  
+- **Rôle** : front + back complet  
+- **Livrables** : [Lien GitHub](https://github.com/...)  
+- **Bilan critique** : UX/UI, répartition des rôles, travail en autonomie
 
 ---
 
-## 👨‍💻 Expérience professionnelle
+## 👨‍💻 Expériences professionnelles
 
-### Stage [Entreprise] — [Dates]
-- **Secteur** : (ex : SSII, ESN, PME…)
-- **Présentation service** : bref contexte, mission globale
-- **Missions principales** :
-    - Mise en place d’un SI pour la gestion RH (outils utilisés : …)
-    - Script de migration de base de données (compétences mobilisées : développement, administration systèmes)
-    - Participation à la refonte sécuritaire d’un réseau local
+### Stage – VAEG Conformité (Paris 13e) – 2025
+- **Missions principales** :  
+  - Conception et mise en ligne de la nouvelle version du site [vaeg-conformite.fr](https://www.vaeg-conformite.fr)  
+  - Développement d’un espace administrateur (gestion des contenus & utilisateurs)  
+  - Mise en place d’un système de suivi analytique **RGPD compliant**  
+  - Conception d’une architecture technique maintenable  
 - **Compétences développées** :  
-    - Réaliser un dev d’application  
-    - Optimiser une appli  
-    - Administrer des SI communicants  
-    - Gérer des données  
-    - Conduire un projet  
-- **Bilan d’autoévaluation** :  
-    - Points forts : prise d’initiative, autonomie, qualité des livrables  
-    - Points de vigilance : gestion du temps, découverte de nouveaux outils  
-    - Bonnes surprises/problèmes : esprit d’équipe, imprévus techniques
+  - Réaliser → développement web complet (front + back)  
+  - Optimiser → architecture maintenable, performance  
+  - Administrer → gestion d’un espace back-office sécurisé  
+  - Gérer des données → gestion utilisateurs + suivi analytique  
+  - Conduire un projet → organisation, autonomie  
+  - Collaborer → communication avec le référent et l’équipe  
+- **Autoévaluation** :  
+  - Points forts : autonomie, gestion complète du cycle de développement  
+  - Points de vigilance : délais serrés, gestion du scope du projet  
+  - Bonnes surprises : liberté technique, montée en compétences rapides  
+  - Acquis pour la suite : expérience réelle de déploiement en production
+
+### Technicien support IT – JO Paris 2024 (Atos)
+- Gestion d’un site IT pendant les Jeux Olympiques (support, sécurité, incidents).  
+- Compétences : rigueur, réactivité, travail en pression.  
+
+### Développeur web junior – Vinci Aart
+- Participation à une refonte de site vitrine + e-commerce sous Shopify.  
+- Compétences : travail en équipe, SEO, UX/UI.  
+
+### Agent logistique – Chronopost
+- Traitement SAV, gestion de stocks, Excel avancé.  
 
 ---
 
-## 📊 Synthèse d’autoévaluation BUT 2 Passerelle
+## 📊 Bilan BUT 2 Passerelle
 
-| Compétence         | Outils / expériences clés      | Points forts                                   | Axes de progression        |
+| Compétence         | Outils / Expériences clés      | Points forts                                   | Axes de progression        |
 |--------------------|-------------------------------|------------------------------------------------|---------------------------|
-| Réaliser           | Java, Django, React, Git      | Rigueur du code, documentation, autonomie       | Gestion des tests         |
-| Optimiser          | Docker, scripts Bash, SQL     | Analyse perfs, réactivité                      | Optimisation front-end    |
-| Administrer        | Linux, Docker, réseaux        | Déploiement, scripts, troubleshooting           | Supervision avancée       |
-| Gérer des données  | PostgreSQL, Mongo, PowerBI    | Modélisation, requêtage avancé                  | Big Data / BI avancée     |
-| Conduire projet    | SCRUM, Notion, Gantt, Trello  | Organisation, reporting, gestion équipe         | Prise de décision rapide  |
-| Collaborer         | GitHub, Slack, visio          | Communication, adaptabilité, sens du collectif  | Leadership technique      |
+| Réaliser           | React, PHP, Node, Java        | Rigueur, autonomie, déploiement complet        | Tests unitaires           |
+| Optimiser          | Docker, SQL,                  | Analyse perfs, documentation                   | Optimisation front-end    |
+| Administrer        | Linux, réseaux, Bash          | Scripts, troubleshooting                       |            /              |
+| Gérer des données  | PostgreSQL, MYSQL, Python     | Modélisation, requêtage                        | Rigueur de l'analyse      |
+| Conduire projet    | Agile, Klaxoon , Trello       | Organisation, reporting , prise d'initative    | Décision rapide           |
+| Collaborer         | GitHub, Slack, équipe projet  | Communication, adaptabilité                    |            /              |
+
+---
+
+## ✅ Conclusion
+Mon parcours m’a permis de développer des compétences techniques solides et une capacité d’adaptation dans divers environnements (start-up, grands événements, PME).  
+Pour la suite, je souhaite approfondir :  
+- Les **tests automatisés** et la **sécurité** des applications avant leur création 
+- Mes compétences en gestion de données notamment en SQL  
+Mon objectif est de continuer à évoluer dans le domaine de l'informatique mais plus dans un rôle de conseiller tout en participant à des projets incluant mes comptétences
+en développement web .
 
 ---
 
 ## ✉️ Me contacter
-
-- [LinkedIn](https://www.linkedin.com/in/anouar-rouibi)
-- Email (à compléter dans le README)
-
+- [LinkedIn](https://www.linkedin.com/in/anouar-rouibi)  
+- [GitHub](https://github.com/Anwar101293)  
+- [Email](mailto:anouar.rbpro@gmail.com)  
 
 ---
-
-> *Portfolio BUT 2 Passerelle — valorisation de compétences et autoévaluation continue — déployé sur GitHub Pages*  
-> *Tous les livrables, codes sources, et traces de projets sont disponibles via les liens référencés.*
-
