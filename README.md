@@ -1,7 +1,7 @@
 # ![](./photocv.png){:style="width:150px; border-radius:50%"}  
 # Anouar Rouibi
 
-### Étudiant en BUT TECHNOLOIGIE DE L'INFORMATION – Université Sorbonne Paris Nord  
+### Étudiant en BUT TECHNOLOGIE DE L'INFORMATION – Université Sorbonne Paris Nord  
 [LinkedIn](https://www.linkedin.com/in/anouar-rouibi) • [Email](mailto:anouar.rbpro@gmail.com) • [GitHub](https://github.com/Anwar101293)
 
 ---
