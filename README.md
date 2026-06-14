@@ -1,129 +1,96 @@
 # ![](./photocv.png){:style="width:150px; border-radius:50%"}  
 # Anouar Rouibi
 
-### Étudiant en BUT TECHNOLOGIE DE L'INFORMATION – Université Sorbonne Paris Nord  
+### Étudiant en BUT 3 INFORMATIQUE (Parcours Réalisation d'Applications) – Université Sorbonne Paris Nord  
 [LinkedIn](https://www.linkedin.com/in/anouar-rouibi) • [Email](mailto:anouar.rbpro@gmail.com) • [GitHub](https://github.com/Anwar101293)
 
 ---
 
-## 📝 A propos
-Étant en **BUT 2 passerelle** après un **BTS SIO**, j’ai choisi de continuer mon parcours vers le développement web, l’administration système et la gestion de projet.  
-Mon objectif a long terme est de devenir **Un consultant IT**, en combinant mes compétences techniques et mes expériences en entreprise.  
-Ce portfolio présente mes **projets, compétences et stages** en adoptant une démarche réflexive, conformément aux attendus de ce BUT.
+## Sommaire
+* TOC
+{:toc}
 
 ---
 
-## 📈 Compétences clés
-- **Réaliser** : développement full-stack (React, Node.js,PHP, C# .NET, JAVA)  
-- **Optimiser** : architecture maintenable, refactoring, performance, documentation  
-- **Administrer** : systèmes Linux/Windows, Docker, sécurité, bash  
-- **Gérer des données** : SQL (PostgreSQL, MySQL), modélisation, reporting, data-viz  
-- **Conduire un projet** : méthodes Agile (Scrum/Kanban), Notion, Trello, gestion d’équipe  
-- **Collaborer** : GitHub, Slack, communication en équipe, adaptation aux contraintes  
----
-
-## 🚀 Parcours académique
-- **2024-2025** : BUT 2 Passerelle TI – IUT DE VILLETANEUSE 
-- **2022-2024** : BTS Service informatiques des organisations (option SLAM) – Lycée Parc de Vilgénis, Massy  
-- **2018-2021** : Bac général – Lycée Blaise Cendrars, Sevran  
+## 📝 1. Introduction
+Après un **BTS SIO (option SLAM)** et une année de **BUT 2 passerelle Sciences des Données-Informatique**, je finalise actuellement mon **BUT 3 Informatique**.  
+Mon objectif à long terme est de devenir **Consultant IT**, en combinant mes compétences techniques en développement web et mes expériences en entreprise.  
+Ce portfolio a pour objectif de documenter et argumenter ma trajectoire de développement, en adoptant une démarche réflexive vis-à-vis des compétences acquises tout au long de mon cursus.
 
 ---
 
-## 🛠 Projets & SAÉ
+## 📈 2. Synthèse des 6 Compétences du BUT
 
-### SAÉ 01 : Enquête sur la poursuite d’études et l’insertion professionnelle – IUT de Villetaneuse (janv. 2025 – avr. 2025)  
-- **Contexte** : Projet mené à la demande du **HCÉRES** pour analyser le devenir des diplômés de l’IUT.  
-- **Objectifs** : Étudier les trajectoires (poursuites d’études, insertion professionnelle) et fournir des recommandations aux responsables de formation.  
-- **Actions réalisées** :  
-  - Interviews qualitatives avec chefs de départements  
-  - Création d’un questionnaire structuré pour anciens diplômés  
-  - Analyse et synthèse des données collectées  
-- **Compétences mobilisées** : gestion de projet, collecte & analyse de données, communication académique  
-- **Bilan critique** :  
-  - Points forts : rigueur méthodologique, restitution claire  
-  - Vigilance : délais de collecte parfois contraints  
-  - Acquis : meilleure compréhension des démarches d’évaluation académique
+### Compétence 1 : Réaliser
+**Ressources et Outils :** React, Node.js, PHP, C# .NET, JAVA, Flutter, Python.
+**Preuves / Mises en pratique :** 
+*   *Application Mobile "BookWise" (Flutter/Dart)* : Moteur de recommandation adaptatif.
+*   *Application de gestion de magasin (C# / .NET)* : Développement intégral (BDD, logique métier, UI).
+**Acquis et Bilan :** Rigueur et autonomie acquises sur le développement full-stack. Déploiement complet maîtrisé. 
+*Axe de progression :* Intégrer la rédaction de tests unitaires (TDD) plus tôt dans la phase de réalisation.
 
----
+### Compétence 2 : Optimiser
+**Ressources et Outils :** Docker, SQL, Analyse de requêtes, SEO.
+**Preuves / Mises en pratique :** 
+*   *Projet Vinci Aart* : Optimisation SEO et intégration responsive/mobile first d'une plateforme Shopify.
+**Acquis et Bilan :** Bonne capacité d'analyse des performances et de rédaction de documentation technique. 
+*Axe de progression :* Approfondir l'optimisation avancée du front-end.
 
-### SAÉ 02 : Application de gestion d’équipement de sport d’hiver (janv. 2024 – avr. 2024)  
-- **Contexte** : Projet d’équipe pour un **village de vacances**  
-- **Objectifs** : Développer une application de bureau pour gérer stocks, locations et retours d’équipements (skis, snowboards, casques, vêtements).  
-- **Technologies utilisées** : C#, .NET Framework, MySQL, Windows Form  
-- **Rôle** : développement intégral (conception base de données, logique métier, interface utilisateur)  
-- **Bilan critique** :  
-  - Points forts : gestion efficace des stocks, interface intuitive  
-  - Vigilance : manque de tests automatisés et documentation à améliorer  
-  - Acquis : maîtrise de C# / .NET, conception d’une application complète orientée gestion  
-  - **Livrables** : [Lien GitHub](https://github.com/Anwar101293/Projet_magasin_sport)
+### Compétence 3 : Administrer
+**Ressources et Outils :** Linux/Windows, Bash, Réseaux, Sécurité.
+**Preuves / Mises en pratique :** 
+*   *Technicien Support IT J.O Paris 2024 (ATOS)* : Prise en charge d'incidents, installation et support d'applications métiers.
+**Acquis et Bilan :** Grande réactivité acquise face aux incidents et création de scripts de troubleshooting efficaces. 
 
----
+### Compétence 4 : Gérer des données
+**Ressources et Outils :** PostgreSQL, MySQL, Python, SQLite.
+**Preuves / Mises en pratique :** 
+*   *Projet THALES Group* : Scripts Python pour extraction FTP, structuration CSV et Dashboard Streamlit avec l'API Groq.
+**Acquis et Bilan :** Maîtrise de la modélisation relationnelle et du requêtage complexe.
+*Axe de progression :* Maintenir une rigueur constante lors des phases d'analyse de données brutes.
 
-## 👨‍💻 Expériences professionnelles
+### Compétence 5 : Conduire un projet
+**Ressources et Outils :** Méthodes Agile (Scrum/Kanban), Jira, Trello, Notion.
+**Preuves / Mises en pratique :** 
+*   *SAÉ 01 (HCÉRES)* : Conduite d'une enquête sur la poursuite d'études. Organisation des interviews et analyse des données sous contrainte de temps.
+**Acquis et Bilan :** Capacité d'organisation, restitution claire et prise d'initiative.
+*Axe de progression :* Améliorer la rapidité de décision face aux imprévus de planning.
 
-### Stage – VAEG Conformité (Paris 13e) – 2025
-- **Missions principales** :  
-  - Conception et mise en ligne de la nouvelle version du site [vaeg-conformite.fr](https://www.vaeg-conformite.fr)  
-  - Développement d’un espace administrateur (gestion des contenus & utilisateurs)  
-  - Mise en place d’un système de suivi analytique **RGPD compliant**  
-  - Conception d’une architecture technique maintenable  
-- **Compétences développées** :  
-  - Réaliser → développement web complet (front + back)  
-  - Optimiser → architecture maintenable, performance  
-  - Administrer → gestion d’un espace back-office sécurisé  
-  - Gérer des données → gestion utilisateurs + suivi analytique  
-  - Conduire un projet → organisation, autonomie  
-  - Collaborer → communication avec le référent et l’équipe  
-- **Autoévaluation** :  
-  - Points forts : autonomie, gestion complète du cycle de développement  
-  - Points de vigilance : délais serrés, gestion du scope du projet  
-  - Bonnes surprises : liberté technique, montée en compétences rapides  
-  - Acquis pour la suite : expérience réelle de déploiement en production
-
-### Stage – Vinci Aart (La Courneuve) – 2023-2024  
-- **Contexte** : Agence de design et rénovation  
-- **Missions principales** :  
-  - Collaboration avec une équipe de 3 développeurs pour la **refonte du site vitrine**  
-  - Développement d’une **plateforme e-commerce** (Shopify) pour les produits de parfumerie d’intérieur  
-  - Optimisation SEO et intégration responsive/mobile first  
-- **Compétences développées** :  
-  - Réaliser → développement front-end & CMS  
-  - Optimiser → ergonomie, accessibilité, SEO  
-  - Administrer → intégration & configuration CMS  
-  - Collaborer → travail en équipe, méthode agile  
-- **Autoévaluation** :  
-  - Points forts : esprit d’équipe, réactivité, maîtrise des outils CMS  
-  - Vigilance : adaptation aux contraintes de l’agence et délais serrés  
-  - Acquis : expérience e-commerce, UX/UI, gestion de bugs et optimisation  
+### Compétence 6 : Collaborer
+**Ressources et Outils :** Git, GitHub Project, Slack, Travail en équipe.
+**Preuves / Mises en pratique :** 
+*   *Application "BookWise"* et *Projet Vinci Aart* : Co-développement et gestion des versions.
+**Acquis et Bilan :** Forte adaptabilité, communication fluide avec les référents et l'équipe technique.
 
 ---
 
-## 📊 Bilan BUT 2 Passerelle
+## 👨‍💻 3. Stage de BUT 3 : VÆG Conformité
 
-| Compétence         | Outils / Expériences clés      | Points forts                                   | Axes de progression        |
-|--------------------|-------------------------------|------------------------------------------------|---------------------------|
-| Réaliser           | React, PHP, Node, Java        | Rigueur, autonomie, déploiement complet        | Tests unitaires           |
-| Optimiser          | Docker, SQL,                  | Analyse perfs, documentation                   | Optimisation front-end    |
-| Administrer        | Linux, réseaux, Bash          | Scripts, troubleshooting                       |            /              |
-| Gérer des données  | PostgreSQL, MYSQL, Python     | Modélisation, requêtage                        | Rigueur de l'analyse      |
-| Conduire projet    | Agile, Klaxoon , Trello       | Organisation, reporting , prise d'initative    | Décision rapide           |
-| Collaborer         | GitHub, Slack, équipe projet  | Communication, adaptabilité                    |            /              |
+**Période :** Juillet 2025 - Août 2025 (Paris 13e)
+**Rôle :** Développeur Full Stack
 
----
+**Missions réalisées :**
+J'ai été chargé de la conception d'un espace administrateur conforme au RGPD pour le site de l'entreprise. Cela a impliqué :
+*   La modélisation d'une base de données relationnelle en MySQL intégrant le tracking comportemental.
+*   Le développement d'une API REST sécurisée par JWT.
+*   L'alimentation des données d'un tableau de bord analytique.
 
-## ✅ Conclusion
-Mon parcours m’a permis de développer des compétences techniques solides et une capacité d’adaptation dans divers environnements (start-up, grands événements, PME).  
-Pour la suite, je souhaite approfondir :  
-- Les **tests automatisés** et la **sécurité** des applications avant leur création 
-- Mes compétences en gestion de données notamment en SQL  
-Mon objectif est de continuer à évoluer dans le domaine de l'informatique mais plus dans un rôle de conseiller tout en participant à des projets incluant mes comptétences
-en développement web .
+**Bilan critique et Auto-évaluation :**
+*   **Les points forts :** J'ai pu faire preuve d'une grande autonomie et gérer complètement l'architecture MVC et le cycle de développement (Sprints Agiles).
+*   **Les bonnes surprises :** La grande liberté technique qui m'a été accordée m'a permis une montée en compétences très rapide sur React et le Clean Code.
+*   **Les vrais problèmes et points de vigilance :** Les délais étaient très serrés, ce qui a rendu la gestion du "scope" (périmètre) du projet difficile à tenir par moments.
+*   **Les acquis pour la suite (Si c'était à refaire) :** J'ai acquis une véritable expérience de déploiement en production. Si c'était à refaire, je planifierais différemment la répartition des tâches pour anticiper les débordements de délais en fin de sprint.
 
 ---
 
-## ✉️ Me contacter
-- [LinkedIn](https://www.linkedin.com/in/anouar-rouibi)  
-- [GitHub](https://github.com/Anwar101293)  
-- [Email](mailto:anouar.rbpro@gmail.com)  
+## ✅ 4. Conclusion
 
----
+Mon parcours, débuté au lycée Blaise Cendrars et enrichi par la passerelle Data-Informatique, m'a permis de développer des compétences techniques solides et une grande capacité d’adaptation. Les différents environnements professionnels rencontrés (start-up, grands événements comme les J.O, PME) ont forgé mon approche du développement.
+
+**Acquis et perspectives :** 
+Pour mon insertion professionnelle, je souhaite capitaliser sur les bonnes pratiques acquises (architecture MVC, méthodes Agiles). Les points de vigilance que j'ai identifiés me poussent à vouloir approfondir :
+*   L'intégration de tests automatisés (TDD) dès le début de la conception.
+*   L'optimisation de la sécurité des applications.
+*   L'expertise en gestion et modélisation de données (SQL avancé).
+
+Mon objectif est de continuer à évoluer dans le domaine de l'informatique vers un rôle de conseil, tout en gardant une forte implication technique dans le développement web.
