@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anouar ROUIBI | Portfolio BUT 3 Informatique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+
+[data-theme="dark"] {
+  --bg:          #0a0f0a;
+  --bg2:         #0d130d;
+  --surface:     #111811;
+  --surface2:    #0f150f;
+  --border:      #1e2e1e;
+  --text:        #d8edd8;
+  --text-2:      #7aab7a;
+  --text-3:      #3a5a3a;
+  --accent:      #4ade80;
+  --accent-bg:   rgba(74,222,128,0.08);
+  --accent-bd:   rgba(74,222,128,0.25);
+  --purple:      #a78bfa;
+  --purple-bg:   rgba(167,139,250,0.1);
+  --orange:      #fb923c;
+  --shadow:      0 2px 8px rgba(0,0,0,0.6), 0 6px 24px rgba(0,0,0,0.4);
+  --shadow-lg:   0 12px 40px rgba(0,0,0,0.7);
+  --nav-blur:    rgba(10,15,10,0.92);
+  --hero-text:   #ffffff;
+  --hero-sub:    rgba(255,255,255,0.65);
+  --hero-badge:  rgba(74,222,128,0.1);
+  --hero-badge-bd: rgba(74,222,128,0.3);
+}
+[data-theme="light"] {
+  --bg:          #f0f5f0;
+  --bg2:         #e6f0e6;
+  --surface:     #ffffff;
+  --surface2:    #f3f9f3;
+  --border:      #c0d8c0;
+  --text:        #0f1f0f;
+  --text-2:      #3a6040;
+  --text-3:      #7aaa8a;
+  --accent:      #16a34a;
+  --accent-bg:   rgba(22,163,74,0.07);
+  --accent-bd:   rgba(22,163,74,0.25);
+  --purple:      #7c3aed;
+  --purple-bg:   rgba(124,58,237,0.07);
+  --orange:      #ea580c;
+  --shadow:      0 2px 6px rgba(0,60,20,0.07), 0 6px 20px rgba(0,60,20,0.05);
+  --shadow-lg:   0 12px 40px rgba(0,60,20,0.12);
+  --nav-blur:    rgba(240,245,240,0.93);
+  --hero-text:   #0f1f0f;
+  --hero-sub:    rgba(15,31,15,0.6);
+  --hero-badge:  rgba(22,163,74,0.08);
+  --hero-badge-bd: rgba(22,163,74,0.25);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif;font-weight:400;line-height:1.7;overflow-x:hidden;transition:background .4s,color .4s}
+a{color:var(--accent);text-decoration:none}
+img{display:block}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:0 40px;height:56px;display:flex;align-items:center;justify-content:space-between;transition:background .3s,border-color .3s}
+#nav.scrolled{background:var(--nav-blur);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-brand{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;color:var(--text);letter-spacing:-.01em}
+.nav-brand .accent{color:var(--accent)}
+.nav-links{display:flex;gap:2px;list-style:none;align-items:center}
+.nav-links a{font-size:13px;font-weight:500;padding:5px 12px;border-radius:6px;color:var(--text-2);transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--accent);background:var(--accent-bg)}
+.nav-social-group{display:flex;align-items:center;gap:10px;margin-left:24px;border-left:1px solid var(--border);padding-left:14px}
+.nav-icon-li{display:inline-flex;align-items:center}
+.nav-svg{width:18px;height:18px;fill:var(--text-3);transition:fill .2s,transform .2s}
+.nav-svg:hover{fill:var(--accent);transform:translateY(-2px)}
+.theme-btn{width:34px;height:34px;border-radius:8px;border:1px solid var(--border);background:var(--surface);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;transition:border-color .2s,background .2s;margin-left:8px}
+.theme-btn:hover{border-color:var(--accent);background:var(--accent-bg)}
+
+/* HERO */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:var(--bg);overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(74,222,128,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(74,222,128,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 30%,transparent 100%)}
+.hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(74,222,128,.12) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.hero-content{position:relative;z-index:10;text-align:center;padding:80px 32px;max-width:860px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;color:var(--accent);background:var(--accent-bg);border:1px solid var(--accent-bd);padding:5px 14px;border-radius:100px;margin-bottom:28px;letter-spacing:.05em;opacity:0;animation:fadeUp .6s .1s ease both}
+.hero-tag::before{content:'●';font-size:8px}
+.hero-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(40px,7vw,82px);line-height:1.0;letter-spacing:-.04em;color:var(--hero-text);margin-bottom:16px;min-height:1.05em}
+.hero-role{font-family:'JetBrains Mono',monospace;font-size:clamp(14px,2vw,20px);font-weight:400;color:var(--text-2);margin-bottom:12px;min-height:1.5em}
+.hero-role .cursor{display:inline-block;width:2px;height:.85em;background:var(--accent);margin-left:2px;border-radius:1px;vertical-align:middle;animation:blink 1s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-desc{font-size:16px;color:var(--text-2);max-width:520px;margin:0 auto 40px;line-height:1.8;opacity:0;animation:fadeUp .6s .5s ease both}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;opacity:0;animation:fadeUp .6s .7s ease both}
+.btn{display:inline-flex;align-items:center;gap:7px;font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;padding:11px 22px;border-radius:8px;border:1.5px solid transparent;cursor:pointer;text-decoration:none;transition:all .18s;letter-spacing:-.01em}
+.btn-primary{background:var(--accent);color:#0a0f0a;border-color:var(--accent)}
+.btn-primary:hover{opacity:.88;transform:translateY(-2px);box-shadow:0 6px 20px rgba(74,222,128,.3)}
+.btn-outline{background:var(--hero-badge);color:var(--hero-text);border-color:var(--hero-badge-bd)}
+.btn-outline:hover{background:rgba(74,222,128,.15);transform:translateY(-2px)}
+.scroll-hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--text-3);font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:.1em;opacity:0;animation:fadeUp .6s 1.4s ease both,bobble 1.6s 1.4s ease-in-out infinite}
+.scroll-line{width:1px;height:32px;background:linear-gradient(to bottom,var(--text-3),transparent)}
+@keyframes bobble{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+/* LAYOUT */
+.container{max-width:1100px;margin:0 auto;padding:0 36px}
+section{padding:96px 0;border-bottom:1px solid var(--border)}
+section:last-of-type{border-bottom:none}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.section-label::before{content:'';width:18px;height:2px;background:var(--accent);border-radius:2px}
+.section-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(26px,3.5vw,42px);color:var(--text);line-height:1.1;letter-spacing:-.03em;margin-bottom:56px}
+
+/* PARCOURS */
+#parcours{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.about-text{font-size:15.5px;line-height:1.85;color:var(--text-2)}
+.about-text p{margin-bottom:18px}
+.about-text p:last-child{margin-bottom:0}
+.about-text strong{color:var(--text);font-weight:600}
+.timeline{position:relative;padding-left:2px}
+.timeline::before{content:'';position:absolute;left:10px;top:8px;bottom:8px;width:1px;background:var(--border)}
+.tl-item{position:relative;padding-left:34px;padding-bottom:26px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:4px;top:5px;width:13px;height:13px;border-radius:50%;border:2px solid var(--border);background:var(--bg);z-index:1;transition:border-color .3s,background .3s,box-shadow .3s}
+.tl-item.done .tl-dot{border-color:var(--accent);background:var(--accent)}
+.tl-item.now  .tl-dot{border-color:var(--purple);background:var(--purple);box-shadow:0 0 0 5px var(--purple-bg)}
+.tl-year{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:var(--text-3);margin-bottom:3px}
+.tl-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:2px}
+.tl-sub{font-size:13px;color:var(--text-2);line-height:1.5}
+
+/* COMPÉTENCES */
+#competences{background:var(--bg2)}
+.comp-tabs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:0;border-bottom:1px solid var(--border)}
+.comp-tab{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;padding:8px 15px;border-radius:7px 7px 0 0;border:1px solid transparent;border-bottom:none;cursor:pointer;color:var(--text-2);background:transparent;transition:all .15s;margin-bottom:-1px}
+.comp-tab:hover{color:var(--text);background:var(--surface);border-color:var(--border);border-bottom-color:var(--surface)}
+.comp-tab.active{color:var(--accent);background:var(--surface);border-color:var(--border);border-bottom-color:var(--surface)}
+.comp-panel{display:none}
+.comp-panel.active{display:block;animation:fadeUp .3s ease}
+.cp-inner{background:var(--surface);border:1px solid var(--border);border-top:none;border-radius:0 0 12px 12px;padding:36px}
+.cp-top{margin-bottom:22px}
+.cp-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-3);margin-bottom:4px;letter-spacing:.05em}
+.cp-title{font-size:26px;font-weight:700;color:var(--text);letter-spacing:-.02em;text-transform:uppercase;margin-bottom:2px}
+.cp-sub{font-size:13.5px;color:var(--text-2);font-style:italic}
+.cp-body{font-size:15px;line-height:1.8;color:var(--text-2);margin-bottom:24px}
+.cp-body strong{color:var(--text);font-weight:600}
+.cp-2col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
+.cp-2col.full{grid-template-columns:1fr}
+.cp-box{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.cp-box-title{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.cp-box-title.g{color:var(--accent)}
+.cp-box-title.o{color:var(--orange)}
+.cp-box-title.p{color:var(--purple)}
+.cp-ul{list-style:none}
+.cp-ul li{font-size:13.5px;color:var(--text-2);padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;line-height:1.5}
+.cp-ul li:last-child{border-bottom:none}
+.cp-ul li::before{content:'›';color:var(--accent);font-weight:900;flex-shrink:0}
+.cp-tags{display:flex;flex-wrap:wrap;gap:7px}
+.cp-tag{font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:500;padding:4px 11px;border-radius:6px;background:var(--accent-bg);color:var(--accent);border:1px solid var(--accent-bd)}
+
+/* PROJETS */
+#projets{background:var(--bg)}
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.proj-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:26px;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s,border-color .2s;position:relative;overflow:hidden}
+.proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple));opacity:0;transition:opacity .2s}
+.proj-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--accent-bd)}
+.proj-card:hover::before{opacity:1}
+.proj-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}
+.proj-gh{display:inline-flex;align-items:center;gap:5px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;padding:4px 10px;border-radius:6px;border:1px solid var(--border);color:var(--text-2);background:var(--surface2);transition:all .15s;text-decoration:none}
+.proj-gh:hover{color:var(--accent);border-color:var(--accent-bd);background:var(--accent-bg)}
+.proj-gh svg{width:13px;height:13px;fill:currentColor}
+.proj-ctx{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--text-3);margin-bottom:6px}
+.proj-title{font-size:17px;font-weight:700;color:var(--text);letter-spacing:-.02em;margin-bottom:10px;line-height:1.25}
+.proj-desc{font-size:13.5px;line-height:1.75;color:var(--text-2);flex:1;margin-bottom:18px}
+.proj-tech{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.tech-badge{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;padding:3px 9px;border-radius:5px;background:var(--surface2);border:1px solid var(--border);color:var(--text-2)}
+
+/* EXPÉRIENCES */
+#experiences{background:var(--bg2)}
+.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:32px}
+.exp-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;position:relative;overflow:hidden;transition:box-shadow .2s,border-color .2s}
+.exp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple))}
+.exp-card:hover{box-shadow:var(--shadow-lg);border-color:var(--accent-bd)}
+.exp-type{display:inline-flex;align-items:center;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border:1px solid var(--accent-bd);padding:3px 10px;border-radius:100px;margin-bottom:14px}
+.exp-org{font-size:20px;font-weight:700;color:var(--text);letter-spacing:-.02em;margin-bottom:3px}
+.exp-role{font-size:14px;color:var(--text-2);margin-bottom:4px}
+.exp-period{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-3);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.exp-period::before{content:'';width:14px;height:1px;background:var(--text-3)}
+.exp-ul{list-style:none;margin-bottom:18px}
+.exp-ul li{font-size:13.5px;color:var(--text-2);padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:10px;line-height:1.55}
+.exp-ul li:last-child{border-bottom:none}
+.exp-ul li .ar{color:var(--accent);font-weight:700;flex-shrink:0;font-size:11px;margin-top:3px}
+.exp-comp-tags{display:flex;flex-wrap:wrap;gap:6px}
+.exp-comp-tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:3px 9px;border-radius:6px;border:1px solid var(--border);color:var(--text-3);background:var(--surface2)}
+.bilan-wrap{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-top:32px}
+.bilan-hdr{padding:16px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.bilan-hdr-title{font-size:16px;font-weight:700;color:var(--text)}
+.bilan-hdr-sub{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-3)}
+.bilan-4{display:grid;grid-template-columns:1fr 1fr}
+.bilan-cell{padding:20px 24px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.bilan-cell:nth-child(2n){border-right:none}
+.bilan-cell:nth-child(3),.bilan-cell:nth-child(4){border-bottom:none}
+.bilan-cell-title{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.bilan-cell-title.g{color:var(--accent)}
+.bilan-cell-title.o{color:var(--orange)}
+.bilan-cell-title.p{color:var(--purple)}
+.bilan-ul{list-style:none}
+.bilan-ul li{font-size:13px;color:var(--text-2);padding:5px 0;border-bottom:1px solid var(--border);line-height:1.5}
+.bilan-ul li:last-child{border-bottom:none}
+
+/* STACK */
+#skills{background:var(--bg)}
+.skill-cats{display:flex;flex-direction:column;gap:36px}
+.skill-cat-title{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.skill-cat-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.skill-logos{display:flex;flex-wrap:wrap;gap:10px}
+.skill-item{display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 16px;border-radius:10px;background:var(--surface);border:1px solid var(--border);min-width:68px;cursor:default;transition:transform .2s,box-shadow .2s,border-color .2s}
+.skill-item:hover{transform:translateY(-5px) scale(1.04);box-shadow:var(--shadow-lg);border-color:var(--accent-bd)}
+.skill-item img{width:30px;height:30px;object-fit:contain}
+.skill-item .skill-name{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;color:var(--text-2);text-align:center}
+
+/* CONCLUSION */
+#conclusion{background:var(--bg2)}
+.conclu-grid{display:grid;grid-template-columns:3fr 2fr;gap:56px}
+.conclu-quote{font-size:18px;font-weight:500;font-style:italic;color:var(--text);line-height:1.6;padding:22px 26px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 12px 12px 0;margin-bottom:28px}
+.conclu-text{font-size:15px;line-height:1.85;color:var(--text-2)}
+.conclu-text p{margin-bottom:16px}
+.conclu-text strong{color:var(--text);font-weight:600}
+.conclu-aside{display:flex;flex-direction:column;gap:16px}
+.aside-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px}
+.aside-title{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.aside-title.g{color:var(--accent)}
+.aside-title.o{color:var(--orange)}
+.aside-title.p{color:var(--purple)}
+.aside-ul{list-style:none}
+.aside-ul li{font-size:13px;color:var(--text-2);padding:5px 0;border-bottom:1px solid var(--border);line-height:1.5;display:flex;gap:8px}
+.aside-ul li:last-child{border-bottom:none}
+.aside-ul li::before{content:'→';color:var(--accent);font-size:11px;flex-shrink:0;margin-top:3px;font-family:'JetBrains Mono',monospace}
+
+/* CONTACT */
+#contact{background:var(--bg);text-align:center}
+.contact-wrapper{max-width:660px;margin:0 auto}
+.contact-desc{font-size:16px;color:var(--text-2);margin-bottom:36px;line-height:1.8}
+.contact-desc strong{color:var(--accent)}
+.contact-grid{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.btn-contact-icon{width:48px;height:48px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;background:var(--surface);border:1px solid var(--border);transition:all .18s}
+.btn-contact-icon:hover{border-color:var(--accent-bd);background:var(--accent-bg);transform:translateY(-3px)}
+.btn-contact-icon svg{width:20px;height:20px;fill:var(--text-2);transition:fill .2s}
+.btn-contact-icon:hover svg{fill:var(--accent)}
+
+/* FOOTER */
+footer{background:var(--surface);border-top:1px solid var(--border);padding:32px 0}
+.footer-inner{max-width:1100px;margin:0 auto;padding:0 36px;display:flex;justify-content:space-between;align-items:center}
+.footer-brand{font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;color:var(--text)}
+.footer-brand .accent{color:var(--accent)}
+.footer-meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-3);text-align:right;line-height:1.7}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:800px){
+  #nav{padding:0 20px}
+  .nav-links{display:none}
+  .about-grid,.exp-grid,.conclu-grid{grid-template-columns:1fr;gap:28px}
+  .proj-grid{grid-template-columns:1fr}
+  .bilan-4{grid-template-columns:1fr}
+  .bilan-cell:nth-child(1),.bilan-cell:nth-child(2){border-right:none}
+  .bilan-cell:nth-child(3){border-bottom:1px solid var(--border)}
+  .cp-2col{grid-template-columns:1fr}
+  .footer-inner{flex-direction:column;gap:12px;text-align:center}
+  .footer-meta{text-align:center}
+  section{padding:64px 0}
+  .container{padding:0 20px}
+}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+::-webkit-scrollbar-thumb:hover{background:var(--text-3)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-brand">Anouar<span class="accent">.</span>Rouibi</div>
+  <ul class="nav-links">
+    <li><a href="#parcours">Parcours</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#experiences">Expériences</a></li>
+    <li><a href="#skills">Stack</a></li>
+    <li><a href="#conclusion">Bilan</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <div class="nav-social-group">
+      <li class="nav-icon-li">
+        <a href="mailto:anouar.rbpro@gmail.com" aria-label="Mail">
+          <svg class="nav-svg" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+        </a>
+      </li>
+      <li class="nav-icon-li">
+        <a href="https://github.com/Anwar101293" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg class="nav-svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.8 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </li>
+    </div>
+  </ul>
+  <button class="theme-btn" id="themeBtn" title="Changer le thème">☀️</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag">BUT 3 Informatique · Parcours Réalisations d'Applications · IUT Villetaneuse 2025–2026</div>
+    <h1 class="hero-name"><span id="tw-name"></span></h1>
+    <p class="hero-role"><span id="tw-role"></span><span class="cursor"></span></p>
+    <p class="hero-desc">Développeur full-stack en fin de BUT Informatique à Villetaneuse.</p>
+    <div class="hero-cta">
+      <a href="#parcours" class="btn btn-primary">Mon parcours</a>
+      <a href="#projets" class="btn btn-outline">Voir mes projets</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>SCROLL</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- PARCOURS -->
+<section id="parcours">
+  <div class="container">
+    <div class="section-label reveal">01 — Introduction</div>
+    <h2 class="section-title reveal">Mon parcours &amp;<br>mes ambitions</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Mon entrée dans l'informatique n'est pas un accident de parcours — c'est une décision que j'ai prise après mon <strong>BTS SIO option SLAM</strong> à Massy, quand j'ai compris que je voulais aller plus loin que le développement applicatif classique. Intégrer l'IUT de Villetaneuse en <strong>DUT Passerelle Sciences des données et Informatique</strong>, puis enchaîner sur le <strong>BUT 3 parcours Réalisations d'Applications</strong>, m'a permis de consolider une base technique solide tout en restant ancré sur des projets concrets et des mises en situation réelles.</p>
+        <p>Ce qui me caractérise, c'est la capacité à m'adapter vite à des environnements variés : de l'IT support sous pression lors des <strong>Jeux Olympiques Paris 2024 chez ATOS</strong>, au développement d'une API REST sécurisée chez <strong>VÆG Conformité</strong>, en passant par un stage web à <strong>VINCI AART</strong> dès ma première année de BTS. Chaque expérience a ajouté une couche à ma compréhension du développement logiciel en conditions réelles.</p>
+        <p>Je vise une poursuite en école d'ingénieur avec une orientation cybersécurité ou analyste. Ce portfolio est le bilan de mes trois ans de BUT — ce que j'ai appris, ce que j'aurais fait différemment, et ce que j'apporte à une équipe technique.</p>
+      </div>
+      <div class="timeline reveal">
+        <div class="tl-item done">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2019 – 2021</div>
+          <div class="tl-title">Baccalauréat Général</div>
+          <div class="tl-sub">Lycée Blaise Cendrars · Sevran (93)</div>
+        </div>
+        <div class="tl-item done">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2022 – 2024</div>
+          <div class="tl-title">BTS SIO option SLAM</div>
+          <div class="tl-sub">Lycée Parc de Vilgénis · Massy (91)<br>Services Informatiques aux Organisations — Obtenu</div>
+        </div>
+        <div class="tl-item done">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2024 – 2025</div>
+          <div class="tl-title">DUT Passerelle Sciences des données – Informatique</div>
+          <div class="tl-sub">IUT de Villetaneuse · USPN — Diplôme obtenu</div>
+        </div>
+        <div class="tl-item done">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2025 – 2026</div>
+          <div class="tl-title">BUT 3 Informatique — Parcours Réalisations d'Applications</div>
+          <div class="tl-sub">IUT de Villetaneuse · Université Sorbonne Paris Nord</div>
+        </div>
+        <div class="tl-item now">
+          <div class="tl-dot"></div>
+          <div class="tl-year">À partir de 2026</div>
+          <div class="tl-title">Poursuite d'études · École d'ingénieur</div>
+          <div class="tl-sub">Objectif : cybersécurité / analyste / développement avancé</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section id="competences">
+  <div class="container">
+    <div class="section-label reveal">02 — Référentiel BUT</div>
+    <h2 class="section-title reveal">Les six compétences</h2>
+    <div class="comp-tabs reveal" role="tablist">
+      <button class="comp-tab active" onclick="switchTab(0)">⚙️ Réaliser</button>
+      <button class="comp-tab" onclick="switchTab(1)">🚀 Optimiser</button>
+      <button class="comp-tab" onclick="switchTab(2)">🗄️ Administrer</button>
+      <button class="comp-tab" onclick="switchTab(3)">📊 Gérer</button>
+      <button class="comp-tab" onclick="switchTab(4)">🗂️ Conduire</button>
+      <button class="comp-tab" onclick="switchTab(5)">🤝 Collaborer</button>
+    </div>
+
+    <!-- C1 RÉALISER -->
+    <div class="comp-panel active" id="cp0">
+      <div class="cp-inner">
+        <div class="cp-top"><div class="cp-num">Compétence 01</div><div class="cp-title">Réaliser</div><div class="cp-sub">Développer des applications informatiques simples et avancées</div></div>
+        <p class="cp-body">C'est la compétence qui résume le mieux mon identité de développeur. Du front-end React au back-end FastAPI, en passant par le C# WinForms et le mobile Flutter, j'ai touché à des paradigmes variés — et c'est volontaire. Mon stage chez <strong>VÆG Conformité</strong> a été la vraie mise en pratique : concevoir un espace administrateur RGPD complet avec une API REST sécurisée par JWT, une base MySQL journalisée, en architecture MVC avec sprints Agile. Ce n'est pas un exercice de cours — c'est une livraison réelle. Mon projet <strong>BookWise</strong> (Flutter/Dart/SQLite) et l'application de gestion de magasin en <strong>C#/.NET</strong> témoignent de ma capacité à couvrir mobile et desktop. Le projet THALES m'a exposé à l'IA appliquée via les LLMs avec l'API Groq.</p>
+        <div class="cp-2col">
+          <div class="cp-box"><div class="cp-box-title g">✅ Points forts</div><ul class="cp-ul"><li>Full-stack : React, Vue.js, Angular côté front ; FastAPI, Node.js, PHP côté back</li><li>Architecture MVC, API REST sécurisée JWT, principes Clean Code</li><li>Mobile Flutter/Dart et desktop C#/.NET</li></ul></div>
+          <div class="cp-box"><div class="cp-box-title o">⚡ Points de vigilance</div><ul class="cp-ul"><li>Anticiper la phase de tests dès le départ — ils ont souvent été ajoutés en fin de sprint</li><li>Consolider SpringBoot pour les architectures Java orientées production</li></ul></div>
+        </div>
+        <div class="cp-box cp-2col full" style="margin-bottom:20px"><div class="cp-box-title p">🎯 Traces principales</div><ul class="cp-ul"><li><strong>Stage VÆG Conformité :</strong> API REST JWT + tableau de bord RGPD, MySQL, React, MVC</li><li><strong>BookWise (SAÉ BUT 3) :</strong> App mobile recommandation livres, Flutter/Dart/SQLite, équipe de 7</li><li><strong>App gestion magasin :</strong> C#/.NET WinForms, POO, base MySQL</li><li><strong>Projet THALES (BUT 2) :</strong> Scripts Python FTP + API Groq + Streamlit</li></ul></div>
+        <div class="cp-tags"><span class="cp-tag">React</span><span class="cp-tag">Vue.js</span><span class="cp-tag">FastAPI</span><span class="cp-tag">Flutter</span><span class="cp-tag">C#/.NET</span><span class="cp-tag">Python</span><span class="cp-tag">Node.js</span><span class="cp-tag">JWT</span></div>
+      </div>
+    </div>
+
+    <!-- C2 OPTIMISER -->
+    <div class="comp-panel" id="cp1">
+      <div class="cp-inner">
+        <div class="cp-top"><div class="cp-num">Compétence 02</div><div class="cp-title">Optimiser</div><div class="cp-sub">Proposer des applications informatiques optimisées selon des critères précis</div></div>
+        <p class="cp-body">L'optimisation, ce n'est pas juste rendre le code plus rapide — c'est le rendre plus juste. Dans <strong>BookWise</strong>, j'ai conçu un moteur de recommandation adaptatif 100% local : pas de serveur externe, pas d'API tierce, une logique basée sur les favoris, l'historique et l'analyse de mots-clés. Ce choix d'architecture est une décision d'optimisation : réduire les dépendances, garantir la réactivité, protéger les données. Dans le projet THALES, le scoring de pertinence des articles académiques via LLM nous a obligés à penser l'efficience des appels API pour rester dans les limites de coût et de latence. Sur VÆG, j'ai optimisé les requêtes MySQL avec journalisation pour ne pas dégrader les performances malgré le tracking comportemental.</p>
+        <div class="cp-2col">
+          <div class="cp-box"><div class="cp-box-title g">✅ Points forts</div><ul class="cp-ul"><li>Conception d'algorithmes locaux sans dépendances externes superflues</li><li>Optimisation des requêtes SQL (indexation, réduction des SELECT *)</li><li>Approche coût/performance dans les intégrations LLM</li></ul></div>
+          <div class="cp-box"><div class="cp-box-title o">⚡ Points de vigilance</div><ul class="cp-ul"><li>Aller plus loin dans l'analyse formelle de complexité algorithmique</li><li>Systématiser le benchmarking des solutions avant de choisir une approche</li></ul></div>
+        </div>
+        <div class="cp-box cp-2col full" style="margin-bottom:20px"><div class="cp-box-title p">🎯 Traces principales</div><ul class="cp-ul"><li><strong>BookWise :</strong> Moteur de recommandation adaptatif local (favoris + historique + mots-clés)</li><li><strong>Projet THALES :</strong> Scoring LLM des publications 6G avec gestion de l'usage API</li><li><strong>VÆG Conformité :</strong> Optimisation des requêtes MySQL avec journalisation et tracking</li></ul></div>
+        <div class="cp-tags"><span class="cp-tag">Algorithmique</span><span class="cp-tag">Optimisation SQL</span><span class="cp-tag">LLM scoring</span><span class="cp-tag">Architecture locale</span></div>
+      </div>
+    </div>
+
+    <!-- C3 ADMINISTRER -->
+    <div class="comp-panel" id="cp2">
+      <div class="cp-inner">
+        <div class="cp-top"><div class="cp-num">Compétence 03</div><div class="cp-title">Administrer</div><div class="cp-sub">Déployer des services dans une architecture réseau</div></div>
+        <p class="cp-body">L'administration système, je l'ai approchée par deux angles très différents. En cours de BUT, via Docker, les pipelines CI/CD et Jenkins. En entreprise, de façon concrète lors de mon stage chez <strong>ATOS aux Invalides pendant les JO Paris 2024</strong> : gérer des tickets d'incidents en temps réel sur un site olympique critique, installer et reconfigurer des équipements sous pression, respecter des procédures ITSM strictes via Jira. En développement, j'utilise Git/GitHub comme outil de travail quotidien avec des workflows de branches et des pratiques qui s'inscrivent dans une logique DevOps. La conteneurisation Docker fait partie de ma stack pour isoler les environnements.</p>
+        <div class="cp-2col">
+          <div class="cp-box"><div class="cp-box-title g">✅ Points forts</div><ul class="cp-ul"><li>Gestion d'incidents IT en environnement critique (JO Paris 2024)</li><li>Outils ITSM (Jira), respect des procédures sous pression</li><li>Conteneurisation Docker, Git avancé et workflows de branches</li></ul></div>
+          <div class="cp-box"><div class="cp-box-title o">⚡ Points de vigilance</div><ul class="cp-ul"><li>Approfondir Docker Compose et les pipelines CI/CD Jenkins en autonomie</li><li>Monter en compétence sur l'administration Linux en production</li></ul></div>
+        </div>
+        <div class="cp-box cp-2col full" style="margin-bottom:20px"><div class="cp-box-title p">🎯 Traces principales</div><ul class="cp-ul"><li><strong>ATOS — JO Paris 2024 :</strong> Support IT N1, gestion d'incidents Jira, install/config équipements sur site olympique</li><li><strong>Stage VÆG :</strong> Gestion de l'environnement de dev et déploiement de l'application web</li><li><strong>Cours BUT :</strong> Docker, Git avancé, CI/CD, Jenkins</li></ul></div>
+        <div class="cp-tags"><span class="cp-tag">Docker</span><span class="cp-tag">Git</span><span class="cp-tag">Jira</span><span class="cp-tag">CI/CD</span><span class="cp-tag">Jenkins</span><span class="cp-tag">ITSM</span></div>
+      </div>
+    </div>
+
+    <!-- C4 GÉRER -->
+    <div class="comp-panel" id="cp3">
+      <div class="cp-inner">
+        <div class="cp-top"><div class="cp-num">Compétence 04</div><div class="cp-title">Gérer</div><div class="cp-sub">Concevoir et gérer des données de l'entreprise</div></div>
+        <p class="cp-body">Les données, je les manipule depuis le BTS — mais c'est le BUT qui m'a appris à les <em>concevoir</em> proprement. Chez <strong>VÆG Conformité</strong>, j'ai modélisé de A à Z une base MySQL avec journalisation des actions et tracking comportemental des utilisateurs : ça demande de penser la donnée comme un outil d'audit, pas juste un stockage. Dans <strong>BookWise</strong>, j'ai conçu le schéma SQLite du moteur de recommandation local. Le projet THALES m'a familiarisé avec le traitement de données semi-structurées (CSV, FTP) et leur exploitation via des LLMs. J'ai aussi travaillé avec MongoDB et Redis dans le cadre des cours de NoSQL.</p>
+        <div class="cp-2col">
+          <div class="cp-box"><div class="cp-box-title g">✅ Points forts</div><ul class="cp-ul"><li>Modélisation relationnelle (MySQL, PostgreSQL, SQLite) avec traçabilité</li><li>Traitement de données semi-structurées (CSV, FTP) en Python/Pandas</li><li>Initiation aux bases NoSQL (MongoDB, Redis)</li></ul></div>
+          <div class="cp-box"><div class="cp-box-title o">⚡ Points de vigilance</div><ul class="cp-ul"><li>Documenter systématiquement le modèle de données dès la conception</li><li>Approfondir l'optimisation sur gros volumes</li></ul></div>
+        </div>
+        <div class="cp-box cp-2col full" style="margin-bottom:20px"><div class="cp-box-title p">🎯 Traces principales</div><ul class="cp-ul"><li><strong>VÆG Conformité :</strong> Base MySQL avec journalisation + tracking, API REST pour le tableau de bord</li><li><strong>BookWise :</strong> Schéma SQLite pour moteur de recommandation local</li><li><strong>Projet THALES :</strong> Extraction FTP, export CSV, visualisation Streamlit + LLM</li></ul></div>
+        <div class="cp-tags"><span class="cp-tag">MySQL</span><span class="cp-tag">PostgreSQL</span><span class="cp-tag">SQLite</span><span class="cp-tag">MongoDB</span><span class="cp-tag">Redis</span><span class="cp-tag">Pandas</span></div>
+      </div>
+    </div>
+
+    <!-- C5 CONDUIRE -->
+    <div class="comp-panel" id="cp4">
+      <div class="cp-inner">
+        <div class="cp-top"><div class="cp-num">Compétence 05</div><div class="cp-title">Conduire</div><div class="cp-sub">Satisfaire les besoins des utilisateurs au travers d'une approche projet</div></div>
+        <p class="cp-body">Conduire un projet, ça commence par comprendre ce que l'utilisateur veut vraiment — et pas seulement ce qu'il dit. Chez <strong>VÆG Conformité</strong>, les sprints Agile m'ont appris à livrer de la valeur de façon itérative, à retravailler les specs en cours de route sans repartir de zéro. Sur <strong>BookWise</strong> (7 personnes), on a rédigé un vrai cahier des charges, géré des jalons, et livré une application fonctionnelle. Les cours de droit du numérique, RGPD et méthodes de gestion de projet du BUT 3 m'ont donné le cadre légal et méthodologique pour contextualiser mes choix techniques. La documentation — rédiger des procédures claires — est aussi quelque chose que j'ai pratiqué chez ATOS comme dans mes stages de développement.</p>
+        <div class="cp-2col">
+          <div class="cp-box"><div class="cp-box-title g">✅ Points forts</div><ul class="cp-ul"><li>Méthode Agile/Scrum appliquée en entreprise (sprints, livrables définis)</li><li>Gestion de projet en équipe avec jalons et documentation (7 personnes)</li><li>Connaissance du cadre RGPD et application concrète chez VÆG</li></ul></div>
+          <div class="cp-box"><div class="cp-box-title o">⚡ Points de vigilance</div><ul class="cp-ul"><li>Formaliser les rétrospectives de sprint pour capitaliser sur les apprentissages</li><li>Maintenir la documentation technique à jour en cours de développement</li></ul></div>
+        </div>
+        <div class="cp-box cp-2col full" style="margin-bottom:20px"><div class="cp-box-title p">🎯 Traces principales</div><ul class="cp-ul"><li><strong>VÆG Conformité :</strong> Sprints Agile, livraison d'un espace admin conforme RGPD</li><li><strong>ATOS JO 2024 :</strong> Rédaction de procédures, documentation technique, protocoles ITSM</li><li><strong>BookWise SAÉ :</strong> Cahier des charges, gestion de projet Git/GitHub Project, équipe de 7</li></ul></div>
+        <div class="cp-tags"><span class="cp-tag">Agile / Scrum</span><span class="cp-tag">RGPD</span><span class="cp-tag">TDD</span><span class="cp-tag">Clean Code</span><span class="cp-tag">Documentation</span><span class="cp-tag">Jira</span></div>
+      </div>
+    </div>
+
+    <!-- C6 COLLABORER -->
+    <div class="comp-panel" id="cp5">
+      <div class="cp-inner">
+        <div class="cp-top"><div class="cp-num">Compétence 06</div><div class="cp-title">Collaborer</div><div class="cp-sub">Travailler dans une équipe informatique</div></div>
+        <p class="cp-body">Le travail en équipe, c'est souvent là où les choses se jouent vraiment. Sur <strong>BookWise</strong> (7 personnes), on a géré conflits Git, désaccords de conception et délais — en restant soudés. Le projet THALES nous a mis en contact avec un vrai client externe, ce qui change les exigences et la communication. Chez <strong>ATOS</strong>, l'équipe IT travaillait en rotation sur un site olympique : la passation d'information entre collègues était critique. J'ai aussi collaboré directement en binôme avec mon camarade de promo Razi Hadj Amor sur le web scraping 6G — une expérience de pair programming intensif sur un projet de bout en bout. La collaboration, pour moi, c'est aussi savoir quand demander de l'aide et quand en donner.</p>
+        <div class="cp-2col">
+          <div class="cp-box"><div class="cp-box-title g">✅ Points forts</div><ul class="cp-ul"><li>Git collaboratif maîtrisé : branches, pull requests, résolution de conflits</li><li>Communication dans des contextes variés (entreprise, client externe, équipe JO)</li><li>Pair programming et revue de code entre pairs</li></ul></div>
+          <div class="cp-box"><div class="cp-box-title o">⚡ Points de vigilance</div><ul class="cp-ul"><li>Formaliser les conventions de branches et commits dès le démarrage d'un projet</li><li>Améliorer la passation documentaire en fin de sprint</li></ul></div>
+        </div>
+        <div class="cp-box cp-2col full" style="margin-bottom:20px"><div class="cp-box-title p">🎯 Traces principales</div><ul class="cp-ul"><li><strong>BookWise :</strong> Collaboration Git/GitHub Project en équipe de 7, gestion de conflits, revues collectives</li><li><strong>Projet THALES :</strong> Travail avec un interlocuteur professionnel externe, livrables définis</li><li><strong>ATOS JO 2024 :</strong> Travail en équipe sous pression, passation d'information critique</li><li><strong>Web Scraping 6G :</strong> Binôme de pair programming sur un projet technique complet</li></ul></div>
+        <div class="cp-tags"><span class="cp-tag">Git collaboratif</span><span class="cp-tag">GitHub Project</span><span class="cp-tag">Communication</span><span class="cp-tag">Pair programming</span><span class="cp-tag">Agile</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETS -->
+<section id="projets">
+  <div class="container">
+    <div class="section-label reveal">03 — Réalisations</div>
+    <h2 class="section-title reveal">Projets réalisés</h2>
+    <div class="proj-grid">
+
+      <div class="proj-card reveal">
+        <div class="proj-head">
+          <div></div>
+          <a href="https://github.com/Anwar101293" class="proj-gh" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+        <div class="proj-ctx">Projet en équipe de 7 · SAÉ BUT 3</div>
+        <h3 class="proj-title">BookWise — Application mobile de recommandation de livres</h3>
+        <p class="proj-desc">Moteur de recommandation adaptatif 100% local : aucune dépendance serveur, des suggestions basées sur les favoris, l'historique de lecture et l'analyse de mots-clés. Un choix architectural intentionnel pour garantir réactivité et confidentialité des données. Travail collaboratif via Git/GitHub Project en équipe de 7, avec gestion de branches et revues de code.</p>
+        <div class="proj-tech"><span class="tech-badge">Flutter</span><span class="tech-badge">Dart</span><span class="tech-badge">SQLite</span><span class="tech-badge">Git</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-head">
+          <div></div>
+          <a href="https://github.com/RaziHadjAmor/Web-Scraping-Articles-6G" class="proj-gh" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+        <div class="proj-ctx">Projet en binôme · Collaboration THALES (BUT 2)</div>
+        <h3 class="proj-title">Web scraping &amp; analyse académique 6G — THALES</h3>
+        <p class="proj-desc">Extraction et analyse automatisée de publications académiques sur la 6G via l'API Arxiv, avec scoring de pertinence via un LLM (API Groq). Dashboard Streamlit interactif pour visualiser les tendances de recherche. Projet réalisé en binôme pour THALES.</p>
+        <div class="proj-tech"><span class="tech-badge">Python</span><span class="tech-badge">Streamlit</span><span class="tech-badge">Groq API</span><span class="tech-badge">Arxiv API</span><span class="tech-badge">Matplotlib</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-head">
+          <div></div>
+          <a href="https://github.com/Anwar101293" class="proj-gh" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+        <div class="proj-ctx">Projet individuel · BUT 2 / BTS SIO</div>
+        <h3 class="proj-title">Application de gestion de magasin</h3>
+        <p class="proj-desc">Application desktop complète de gestion de stock : catalogue produits, gestion des rôles utilisateurs (admin/vendeur), base de données relationnelle. Développée en C#/.NET WinForms en appliquant les principes POO. Premier projet "bureau" structuré, qui m'a appris à penser l'architecture avant de coder.</p>
+        <div class="proj-tech"><span class="tech-badge">C#</span><span class="tech-badge">.NET Framework</span><span class="tech-badge">MySQL</span><span class="tech-badge">WinForms</span><span class="tech-badge">POO</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-head">
+          <div></div>
+          <a href="https://github.com/Anwar101293" class="proj-gh" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+        <div class="proj-ctx">Projet BTS SIO · Site web complet</div>
+        <h3 class="proj-title">Site de gestion d'un zoo</h3>
+        <p class="proj-desc">Application web de gestion d'un zoo développée en Angular (front) avec back-end PHP. Gestion des animaux, des espèces, des soigneurs et des enclos. Premier projet Angular significatif — composants, services, routing — et première confrontation à la réalité d'un framework front-end structurant.</p>
+        <div class="proj-tech"><span class="tech-badge">Angular</span><span class="tech-badge">PHP</span><span class="tech-badge">MySQL</span><span class="tech-badge">HTML/CSS</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPÉRIENCES -->
+<section id="experiences">
+  <div class="container">
+    <div class="section-label reveal">04 — Mises en situation professionnelle</div>
+    <h2 class="section-title reveal">Stages &amp; expériences</h2>
+    <div class="exp-grid">
+
+      <div class="exp-card reveal">
+        <div class="exp-type">Stage BUT 3 · Développeur Full Stack</div>
+        <div class="exp-org">VÆG Conformité</div>
+        <div class="exp-role">Développeur Full Stack</div>
+        <div class="exp-period">Juillet – Août 2025 · Paris 75013</div>
+        <ul class="exp-ul">
+          <li><span class="ar">→</span><span>Conception d'un espace administrateur conforme RGPD avec suivi statistique et éditorial sécurisé</span></li>
+          <li><span class="ar">→</span><span>Modélisation d'une base MySQL avec journalisation et tracking comportemental des utilisateurs</span></li>
+          <li><span class="ar">→</span><span>Développement d'une API REST sécurisée par JWT pour alimenter le tableau de bord</span></li>
+          <li><span class="ar">→</span><span>Architecture MVC, méthode Agile avec sprints, rédaction de tests unitaires</span></li>
+          <li><span class="ar">→</span><span>Stack : React (front), Clean Code, Git — livraison en conditions réelles</span></li>
+        </ul>
+        <div class="exp-comp-tags"><span class="exp-comp-tag">Réaliser</span><span class="exp-comp-tag">Gérer</span><span class="exp-comp-tag">Conduire</span><span class="exp-comp-tag">Collaborer</span></div>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-type">Stage BTS · Développeur Web</div>
+        <div class="exp-org">VINCI AART</div>
+        <div class="exp-role">Développeur Web</div>
+        <div class="exp-period">Décembre 2023 – Janvier 2024 · 2 mois</div>
+        <ul class="exp-ul">
+          <li><span class="ar">→</span><span>Développement et maintenance de pages web (HTML/CSS/JavaScript)</span></li>
+          <li><span class="ar">→</span><span>Intégration de maquettes et adaptation aux exigences des équipes internes</span></li>
+          <li><span class="ar">→</span><span>Première immersion en entreprise dans un contexte de groupe industriel de grande taille</span></li>
+          <li><span class="ar">→</span><span>Collaboration avec l'équipe technique sur les conventions de code et les livrables</span></li>
+        </ul>
+        <div class="exp-comp-tags"><span class="exp-comp-tag">Réaliser</span><span class="exp-comp-tag">Collaborer</span></div>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-type">Mission · Technicien Support IT</div>
+        <div class="exp-org">ATOS — JO Paris 2024</div>
+        <div class="exp-role">Technicien Support IT N1</div>
+        <div class="exp-period">Juillet – Août 2024 · Site des Invalides · Paris 75007</div>
+        <ul class="exp-ul">
+          <li><span class="ar">→</span><span>Prise en charge des incidents et tickets utilisateurs sur un site olympique à criticité maximale</span></li>
+          <li><span class="ar">→</span><span>Installation, configuration et test d'équipements informatiques sous pression temporelle</span></li>
+          <li><span class="ar">→</span><span>Support et mise à jour des applications métiers en temps réel</span></li>
+          <li><span class="ar">→</span><span>Rédaction de procédures et documentation technique via les outils ITSM Jira</span></li>
+        </ul>
+        <div class="exp-comp-tags"><span class="exp-comp-tag">Administrer</span><span class="exp-comp-tag">Conduire</span><span class="exp-comp-tag">Collaborer</span></div>
+      </div>
+    </div>
+
+    <div class="bilan-wrap reveal">
+      <div class="bilan-hdr">
+        <div class="bilan-hdr-title">Analyse critique — Stage BUT 3 · VÆG Conformité</div>
+        <div class="bilan-hdr-sub">Retour réflexif &amp; auto-évaluation</div>
+      </div>
+      <div class="bilan-4">
+        <div class="bilan-cell"><div class="bilan-cell-title g">✅ Points forts</div><ul class="bilan-ul"><li>Livraison d'une application complète en conditions réelles</li><li>Maîtrise JWT et architecture MVC appliquée concrètement</li><li>Bonne adaptation à la méthode Agile avec des sprints courts</li><li>Conformité RGPD intégrée dès la conception, pas ajoutée en fin</li></ul></div>
+        <div class="bilan-cell"><div class="bilan-cell-title o">⚡ Points de vigilance</div><ul class="bilan-ul"><li>Tests unitaires écrits tardivement — doivent être intégrés dès le début</li><li>Documentation technique insuffisante pour faciliter la reprise par un autre développeur</li></ul></div>
+        <div class="bilan-cell"><div class="bilan-cell-title p">💡 Acquis pour la suite</div><ul class="bilan-ul"><li>Écrire les tests avant ou pendant le développement (TDD), pas après</li><li>Systématiser la documentation inline et les README par module</li><li>Mieux calibrer la durée des tâches en sprint planning</li></ul></div>
+        <div class="bilan-cell"><div class="bilan-cell-title o">🎯 Si c'était à refaire…</div><ul class="bilan-ul"><li>Définir le modèle de données et les endpoints API avant de coder le front</li><li>Prévoir des démos intermédiaires plus fréquentes avec le client</li><li>Mettre en place un environnement de staging pour les tests d'intégration</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STACK TECHNIQUE -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label reveal">05 — Stack technique</div>
+    <h2 class="section-title reveal">Compétences informatiques</h2>
+    <div class="skill-cats">
+
+      <div class="skill-cat reveal">
+        <div class="skill-cat-title">Frontend &amp; Mobile</div>
+        <div class="skill-logos">
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"><span class="skill-name">React</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue.js"><span class="skill-name">Vue.js</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" alt="Angular"><span class="skill-name">Angular</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter"><span class="skill-name">Flutter</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JS"><span class="skill-name">JavaScript</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"><span class="skill-name">HTML5</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"><span class="skill-name">CSS3</span></div>
+        </div>
+      </div>
+
+      <div class="skill-cat reveal">
+        <div class="skill-cat-title">Backend &amp; Langages</div>
+        <div class="skill-logos">
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"><span class="skill-name">Python</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="FastAPI"><span class="skill-name">FastAPI</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js"><span class="skill-name">Node.js</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP"><span class="skill-name">PHP</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"><span class="skill-name">Java</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#"><span class="skill-name">C#</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg" alt="Streamlit"><span class="skill-name">Streamlit</span></div>
+        </div>
+      </div>
+
+      <div class="skill-cat reveal">
+        <div class="skill-cat-title">Bases de données</div>
+        <div class="skill-logos">
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL"><span class="skill-name">MySQL</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"><span class="skill-name">PostgreSQL</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite"><span class="skill-name">SQLite</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB"><span class="skill-name">MongoDB</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" alt="Redis"><span class="skill-name">Redis</span></div>
+        </div>
+      </div>
+
+      <div class="skill-cat reveal">
+        <div class="skill-cat-title">DevOps &amp; Outils</div>
+        <div class="skill-logos">
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"><span class="skill-name">Git</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" style="filter:invert(1) brightness(1.5)"><span class="skill-name">GitHub</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker"><span class="skill-name">Docker</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt="Jenkins"><span class="skill-name">Jenkins</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Jira"><span class="skill-name">Jira</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code"><span class="skill-name">VS Code</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONCLUSION -->
+<section id="conclusion">
+  <div class="container">
+    <div class="section-label reveal">06 — Synthèse finale</div>
+    <h2 class="section-title reveal">Bilan de compétences &amp;<br>perspectives d'avenir</h2>
+    <div class="conclu-grid">
+      <div>
+        <div class="conclu-quote reveal">
+          « Ce qui distingue un développeur d'un bon développeur, ce n'est pas le nombre de langages qu'il connaît — c'est sa capacité à livrer quelque chose qui fonctionne, dans un contexte contraint, en équipe. Le BUT m'a appris les deux. »
+        </div>
+        <div class="conclu-text reveal">
+          <p>Arriver au terme de ce BUT Informatique, c'est mesurer le chemin parcouru depuis le BTS SIO : de l'apprentissage des fondamentaux du développement à la livraison d'applications réelles en entreprise, en passant par des projets avec des acteurs comme <strong>THALES</strong> et une <strong>expérience hors-norme aux Jeux Olympiques de Paris 2024</strong>. Ce parcours n'a pas été linéaire — il a été fait de choix, d'adaptations et parfois de remises en question.</p>
+          <p>Ma force principale réside dans la polyvalence technique doublée d'une vraie capacité à travailler dans des environnements professionnels contraints et variés. J'ai développé en C#, en Python, en JavaScript et en Dart. J'ai livré en Agile, géré des bases de données en conditions réelles, et répondu à des incidents IT sous pression olympique. Cette diversité n'est pas de la superficialité — c'est une base qui me permet de m'adapter vite à n'importe quel contexte technique.</p>
+          <p>Les axes d'amélioration que j'identifie — les tests écrits trop tard, la documentation parfois négligée pendant les sprints — sont précisément ceux sur lesquels je veux travailler dans la suite de mon parcours. Une école d'ingénieur, c'est l'endroit pour consolider la rigueur que le rythme de formation ne permet pas toujours d'atteindre pleinement.</p>
+        </div>
+      </div>
+      <div class="conclu-aside">
+        <div class="aside-card reveal">
+          <div class="aside-title g">Points forts identifiés</div>
+          <ul class="aside-ul">
+            <li>Polyvalence full-stack (front, back, mobile, desktop)</li>
+            <li>Expériences professionnelles variées en conditions réelles</li>
+            <li>Capacité d'adaptation rapide à de nouveaux environnements</li>
+            <li>Architecture MVC et API REST sécurisées maîtrisées</li>
+            <li>Travail en équipe et gestion Git collaborative</li>
+          </ul>
+        </div>
+        <div class="aside-card reveal">
+          <div class="aside-title o">Axes de progression</div>
+          <ul class="aside-ul">
+            <li>Adopter le TDD systématiquement dès le début des projets</li>
+            <li>Approfondir la cybersécurité et les architectures sécurisées</li>
+            <li>Progresser sur Docker Compose et les environnements conteneurisés</li>
+          </ul>
+        </div>
+        <div class="aside-card reveal">
+          <div class="aside-title p">Perspectives 2026+</div>
+          <ul class="aside-ul">
+            <li>Poursuite en école d'ingénieur (cybersécurité / analyste)</li>
+            <li>Recherche d'alternance ou de stage longue durée</li>
+            <li>Approfondissement de la sécurité applicative (OWASP)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label reveal">07 — Une opportunité ?</div>
+    <h2 class="section-title reveal">Restons en contact</h2>
+    <div class="contact-wrapper reveal">
+      <p class="contact-desc">Étudiant en <strong>BUT 3 Informatique</strong> à l'IUT de Villetaneuse, je suis à la recherche d'une opportunité pour la suite de mon parcours en école d'ingénieur. Si mon profil correspond à ce que vous cherchez, parlons-en.</p>
+      <div class="contact-grid">
+        <a href="mailto:anouar.rbpro@gmail.com" class="btn-contact-icon" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+        </a>
+        <a href="https://github.com/Anwar101293" target="_blank" rel="noopener" class="btn-contact-icon" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.8 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text-3)">anouar.rbpro@gmail.com &nbsp;·&nbsp; github.com/Anwar101293 &nbsp;·&nbsp; Île-de-France (93)</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Anouar<span class="accent">.</span>Rouibi</div>
+    <div class="footer-meta">Portfolio BUT 3 Informatique<br>© 2026 · Anouar ROUIBI</div>
+  </div>
+</footer>
+
+<script>
+const HERO_NAME = "Anouar ROUIBI";
+const HERO_ROLE = "Développeur Full Stack · BUT 3 Informatique";
+
+const twName = document.getElementById('tw-name');
+const twRole = document.getElementById('tw-role');
+
+function typeWriter(el, text, speed, onDone) {
+  let i = 0; el.textContent = '';
+  function tick() { if (i < text.length) { el.textContent += text[i++]; setTimeout(tick, speed); } else { onDone && onDone(); } }
+  tick();
+}
+setTimeout(() => { typeWriter(twName, HERO_NAME, 70, () => { setTimeout(() => typeWriter(twRole, HERO_ROLE, 30), 300); }); }, 600);
+
+const html = document.documentElement;
+const themeBtn = document.getElementById('themeBtn');
+let isDark = true;
+function applyTheme(dark) {
+  isDark = dark;
+  html.setAttribute('data-theme', dark ? 'dark' : 'light');
+  themeBtn.textContent = dark ? '☀️' : '🌙';
+  localStorage.setItem('ar-theme', dark ? 'dark' : 'light');
+}
+themeBtn.addEventListener('click', () => applyTheme(!isDark));
+const saved = localStorage.getItem('ar-theme');
+if (saved === 'light') applyTheme(false);
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
+  navLinks.forEach(a => {
+    const active = a.getAttribute('href') === '#' + cur;
+    a.style.color = active ? 'var(--accent)' : '';
+    a.style.background = active ? 'var(--accent-bg)' : '';
+  });
+}, { passive: true });
+
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal, .tl-item, .proj-card, .exp-card, .skill-cat, .aside-card').forEach(el => {
+  if (!el.classList.contains('reveal')) el.classList.add('reveal');
+  revealObs.observe(el);
+});
+
+const staggerObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.proj-card, .exp-card, .aside-card, .skill-item').forEach((c, i) => {
+        c.style.transitionDelay = (i * 0.07) + 's';
+        c.classList.add('visible');
+      });
+      staggerObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.05 });
+document.querySelectorAll('.proj-grid, .exp-grid, .conclu-aside, .skill-logos').forEach(el => staggerObs.observe(el));
+
+function switchTab(idx) {
+  document.querySelectorAll('.comp-tab').forEach((t, i) => t.classList.toggle('active', i === idx));
+  document.querySelectorAll('.comp-panel').forEach((p, i) => p.classList.toggle('active', i === idx));
+}
+</script>
+</body>
+</html>
